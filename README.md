@@ -1,7 +1,7 @@
-- `API_ID` : Get From [Here](https://t.me/sexyshnwaz)
-- `API_HASH` : Get From [Here](https://t.me/sexyshnwaz)
-- `BOT_TOKEN` : Get From [BotFather](https://t.me/sexyshnwaz)
-- `DB_URI` : Mongodb [Database](https://t.me/sexyshnwaz)
+- `API_ID` : Get From
+- `API_HASH` : Get From 
+- `BOT_TOKEN` : Get From 
+- `DB_URI` : Mongodb 
 - `ADMIN` : Your Telegram ID.
 - `PICS` - Your bot start images (you can add multiple images)
 - `LOG_CHANNEL` : Log Channel ID.
