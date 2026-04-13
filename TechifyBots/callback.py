@@ -13,9 +13,9 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=text.START.format(query.from_user.mention)
             ),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('ℹ️ 𝖠𝖻𝗈𝗎𝗍', callback_data='about'),
-                 InlineKeyboardButton('📚 𝖧𝖾𝗅𝗉', callback_data='help')],
-                [InlineKeyboardButton('💬 𝖥𝖾𝖾𝖽𝖻𝖺𝖼𝗄 💬', url='https://telegram.me/TechifySupport')]
+                [InlineKeyboardButton(' 𝖠𝖻𝗈𝗎𝗍', callback_data='about'),
+                 InlineKeyboardButton(' 𝖧𝖾𝗅𝗉', callback_data='help')],
+                [InlineKeyboardButton(' 𝖥𝖾𝖾𝖽𝖻𝖺𝖼𝗄 💬', url='https://t.me/sexyshnwaz')]
             ])
         )
 
@@ -26,9 +26,9 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=text.HELP
             ),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('📢 𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url='https://telegram.me/Techifybots')],
-                [InlineKeyboardButton('↩️ 𝖡𝖺𝖼𝗄', callback_data="start"),
-                 InlineKeyboardButton('❌ 𝖢𝗅𝗈𝗌𝖾', callback_data="close")]
+                [InlineKeyboardButton('𝖴𝗉𝖽𝖺𝗍𝖾𝗌', url='https://t.me/sexyshnwaz')],
+                [InlineKeyboardButton('↩𝖡𝖺𝖼𝗄', callback_data="start"),
+                 InlineKeyboardButton('𝖢𝗅𝗈𝗌𝖾', callback_data="close")]
             ])
         )
 
@@ -39,9 +39,9 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=text.ABOUT
             ),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('💻 𝖱𝖾𝗉𝗈',url='https://github.com/TechifyBots/Stylish-Font-Bot'),
-                 InlineKeyboardButton('👨‍💻 𝖮𝗐𝗇𝖾𝗋',user_id=int(ADMIN))],
-                [InlineKeyboardButton("↩️ 𝖡𝖺𝖼𝗄",callback_data="start")]
+                [InlineKeyboardButton('𝖱𝖾𝗉𝗈',url='https://github.com/shnwazdevelope'),
+                 InlineKeyboardButton('𝖮𝗐𝗇𝖾𝗋',user_id=int(8206476526))],
+                [InlineKeyboardButton("↩𝖡𝖺𝖼𝗄",callback_data="start")]
             ])
         )
 

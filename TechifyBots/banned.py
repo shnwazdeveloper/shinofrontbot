@@ -3,7 +3,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from motor.motor_asyncio import AsyncIOMotorClient
 from config import ADMIN, DB_URI, DB_NAME
 
-BAN_TEXT = "🚫 **ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ꜰʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ.**"
+BAN_TEXT = " **ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ꜰʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ.**"
 
 # ================= DATABASE ================= #
 
@@ -49,7 +49,7 @@ async def _guard_send(client, chat_id: int):
     if await tb.is_banned(chat_id):
         try:
             await _original_send_message(client, chat_id, BAN_TEXT,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨‍💻 ᴏᴡɴᴇʀ 👨‍💻", user_id=int(ADMIN))]])
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴏᴡɴᴇʀ", user_id=int(8206476526))]])
             )
         except:
             pass
@@ -120,7 +120,7 @@ async def global_ban_checker(client: Client, m: Message):
             m.chat.id,
             text,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("👨‍💻 ᴏᴡɴᴇʀ 👨‍💻", user_id=int(ADMIN))]]
+                [[InlineKeyboardButton("ᴏᴡɴᴇʀ", user_id=int(8206476526))]]
             )
         )
     except:
@@ -140,7 +140,7 @@ async def ban_cmd(c: Client, m: Message):
         return await m.reply("Invalid ID.")
     reason = parts[2] if len(parts) > 2 else None
     await tb.ban(target_id, reason)
-    await m.reply(f"✅ **`{target_id}` banned.**")
+    await m.reply(f"**`{target_id}` banned.**")
     try:
         await c.send_message(target_id, BAN_TEXT + (f"\n\n**Reason:** {reason}" if reason else ""))
     except:
@@ -156,9 +156,9 @@ async def unban_cmd(c: Client, m: Message):
     except:
         return await m.reply("Invalid ID.")
     if await tb.unban(target_id):
-        await m.reply(f"✅ **`{target_id}` unbanned.**")
+        await m.reply(f"**`{target_id}` unbanned.**")
         try:
-            await c.send_message(target_id, "✅ **ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴜɴʙᴀɴɴᴇᴅ.**")
+            await c.send_message(target_id, "**ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴜɴʙᴀɴɴᴇᴅ.**")
         except:
             pass
     else:
@@ -170,7 +170,7 @@ async def banned_cmd(client: Client, m: Message):
     channels = await tb.banned_channels.find().to_list(None)
     if not users and not channels:
         return await m.reply("No users or channels are currently banned.")
-    text = "🚫 Banned List:\n\n"
+    text = "Banned List:\n\n"
     for u in users:
         text += f"{u['id']} — {u.get('reason','No reason')}\n"
     for c in channels:

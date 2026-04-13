@@ -53,7 +53,7 @@ async def maintenance_blocker(client: Client, m: Message):
                 "ᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ.\n\n"
                 "ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏ."
             ),
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨‍💻 ᴏᴡɴᴇʀ 👨‍💻", user_id=int(ADMIN))]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴏᴡɴᴇʀ", user_id=int(8206476526))]])
         )
     except:
         pass
@@ -67,12 +67,12 @@ async def maintenance_cmd(_, m: Message):
     status = args[1].lower()
     if status == "on":
         if await tb.get_maintenance():
-            return await m.reply("⚠️ Maintenance mode is already enabled.")
+            return await m.reply("Maintenance mode is already enabled.")
         await tb.set_maintenance(True)
-        return await m.reply("✅ Maintenance mode **enabled**.")
+        return await m.reply("Maintenance mode **enabled**.")
     if status == "off":
         if not await tb.get_maintenance():
-            return await m.reply("⚠️ Maintenance mode is already disabled.")
+            return await m.reply("Maintenance mode is already disabled.")
         await tb.set_maintenance(False)
-        return await m.reply("❌ Maintenance mode **disabled**.")
+        return await m.reply("Maintenance mode **disabled**.")
     await m.reply("Invalid status. Use 'on' or 'off'.")

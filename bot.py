@@ -50,9 +50,9 @@ class Bot(Client):
                 now = datetime.now(timezone("Asia/Kolkata"))
                 msg = (
                     f"**{me.mention} is restarted!**\n\n"
-                    f"📅 Date : `{now.strftime('%d %B, %Y')}`\n"
-                    f"⏰ Time : `{now.strftime('%I:%M:%S %p')}`\n"
-                    f"🌐 Timezone : `Asia/Kolkata`"
+                    f" Date : `{now.strftime('%d %B, %Y')}`\n"
+                    f" Time : `{now.strftime('%I:%M:%S %p')}`\n"
+                    f" Timezone : `Asia/Kolkata`"
                 )
                 await self.send_message(LOG_CHANNEL, msg)
             except Exception as e:
